@@ -1,0 +1,37 @@
+[   
+    {
+      "make": "Rolls Royce",
+      "model": "Phantom Serenity",
+      "year": 2018,
+      "milage": 12,
+      "img": "https://www.rolls-roycemotorcarsranchomirage.com/assets/inventory/vehicles/sca688l56ju105524/ip/1.jpg"
+    },
+    {
+      "make": "Aston Martin",
+      "model": "One-77",
+      "year": 2018,
+      "milage": 20,
+      "img": "https://en.wikipedia.org/wiki/Aston_Martin_One-77#/media/File:Aston_Martin_One-77_(8701486190)_(cropped).jpg"
+    },
+    {
+      "make": "Bugatti",
+      "model": "Chiron",
+      "year": 2018,
+      "milage": 20,
+      "img": "http://www.tucnyweb.sk/wp-content/uploads/2017/06/bugatti-chiron.jpg"
+    },
+    {
+      "make": "Ferrari",
+      "model": "F60 America",
+      "year": 2018,
+      "milage": 35,
+      "img": "https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/916x515/quality/95/http://www.blogcdn.com/slideshows/images/slides/377/901/3/S3779013/slug/l/160049-car-ferrari-f60-america-1.jpg"
+    },
+    {
+      "make": "Pagani",
+      "model": "Huayra BC",
+      "year": 2018,
+      "milage": 20,
+      "img": "https://ag-spots-2017.o.auroraobjects.eu/2017/09/03/pagani-huayra-bc-kingtasma-c172003092017185551_1.jpg"
+    }
+    ]

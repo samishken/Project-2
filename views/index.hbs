@@ -1,0 +1,13 @@
+<h1>DC Elite Cars</h1>
+
+ <section class="list">
+  {{#each cars}}
+  <a href="/luxurycars/{{id}}" class="inventory-list">
+    <div class="car-inventory">
+      <div class="car-make">
+        <p>{{make}}</p>
+      </div>
+    </div>
+  </a>
+  {{/each}}
+</section>
