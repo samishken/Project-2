@@ -1,0 +1,18 @@
+<h1>DC Elite Cars Inventory List</h1>
+
+<section class="inventory list">
+  {{#each cars}}
+  <a href="/luxurycars/{{id}}" class="show details">
+    <div class="car detail">
+      <div class="card-detail">
+        <p>{{make}} - {{model}} - {{year}}</p>
+      </div>
+    </div>
+  </a><style>a {text-decoration: none; }</style>
+  {{/each}}
+</section>
+<div id="access inventory">
+      <form action="/luxurycars/new" method="add">
+        <button onclick="text">Add Inventory</button>
+      </form>
+  </div>

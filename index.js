@@ -3,12 +3,14 @@ const hbs = require('hbs')
 const parser = require('body-parser')
 const Luxury = require('./models/Luxury')
 const luxuryCarsController = require('./controllers/luxurycars')
+const methodOverride = require('method-override')
 
 const app = express()
 
 app.set('view engine', 'hbs')
 app.use(parser.urlencoded({ extended: true }))
 app.use(express.static('public'))
+app.use(methodOverride('_method'))
 
 app.get('/', (req, res) => {
   Luxury.find({}).then(function (cars) {
@@ -16,17 +18,6 @@ app.get('/', (req, res) => {
   })
 })
 
-
-
-app.use('/luxurycar', luxuryCarsController)
+app.use('/luxurycars', luxuryCarsController)
 // start our server
 app.listen(3000, () => console.log('This is working...Project 2'))
-
-
-// app.get('/', (req, res) => {
-//   res.render('index')
-// })
-
-// app.get('/', (req, res) => {
-//   res.send('Project Workin')
-// })

@@ -1,0 +1,16 @@
+ <h3>Update Vehicle Information</h3>
+    <form action="/luxurycars/{{this.id}}?_method=put" method="post">
+        <div class="form-group">
+            <label for="title">Make</label>
+            <input type="text" value="{{this.make}}" name="make" required>
+        </div>
+         <div class="form-group">
+            <label for="title">Model</label>
+            <input type="text" value="{{this.model}}" name="model" required>
+        </div>
+         <div class="form-group">
+            <label for="title">Year</label>
+            <input type="text" value="{{this.year}}" name="year" required>
+        </div>
+        <input type ="submit" value= "Return">
+    </form>
