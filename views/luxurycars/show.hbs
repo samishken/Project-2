@@ -1,25 +1,25 @@
 
 <section class="show">
-    <div class="show details">
+    <div class="show-details">
         <div class="model detail">
-           <h4>{{make}}</h4>
-       </div>
-      <div class="make-detail">
-             <p>{{ model }}</p>
+           <p>{{make}}</p>
+        </div>
+        <div class="make-detail">
+            <p>{{ model }}</p>
         </div>
         <div class="year-detail">
-             <p>{{ year }}</p>
+            <p>{{ year }}</p>
         </div>
     </div>
 </section>
 
-<br>
-<form action="/luxurycars/edit/{{this.id}}?_method=delete" method="edit">
-  <input type="submit" value="Edit">
-</form> 
-
-<form action="/luxurycars/edit/{{this.id}}?_method=delete" method="post">
-  <input type="submit" value="Delete">
-</form> 
-
-</form>
+<div class="edit-button">
+  <form action="/luxurycars/edit/{{this.id}}?_method=delete" method="edit">
+    <input class="button1" type="submit" value="Edit">
+  </form> 
+</div>
+<div class="delete-button2">
+  <form action="/luxurycars/edit/{{this.id}}?_method=delete" method="post">
+    <input class="button2" type="submit" value="Delete">
+  </form> 
+</div>

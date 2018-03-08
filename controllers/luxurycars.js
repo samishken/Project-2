@@ -51,15 +51,8 @@ router.get('/edit/:id', (req, res) => {
 
 //edit & update
 router.put('/:id', (req, res) => {
-  Luxury.findOneAndUpdate({_id: req.params.id},
-    { make: req.body.make,
-      model: req.body.model,
-      year: req.body.year
-    },
-    { new: true})
-  .then(cars => {
-    res.redirect('/luxurycars')
-    })
+  Luxury.findOneAndUpdate({_id: req.params.id}, req.body)
+  .then(cars => res.redirect('/luxurycars'))
 })
 
 //delete

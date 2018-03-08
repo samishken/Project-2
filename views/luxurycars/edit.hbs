@@ -1,6 +1,6 @@
  <div class="edit-details">
  <h3>Update Vehicle Information</h3>
-    <form action="/luxurycars" method="post">
+    <form action="/luxurycars/{{this.id}}?_method=put" method="post">
         <div class="form-group">
             <label for="title">Make</label>
             <input type="text" value="{{this.make}}" name="make" required>

@@ -6,7 +6,7 @@ body {
 .car-detail {
         border-style: solid;
         border-width: 50px;
-        border-color: #ffffff;    
+        border-color: grey;    
     }
 
 .edit-details {
@@ -15,5 +15,37 @@ body {
 
 .show-details {
     padding: 60px;
-    
+    border-style: solid;
+    border-width: 50px;
+    border-color: grey;    
+}
+
+button, button1, button2 {
+    background-color: black;
+    width: 250px;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #1d3c6a;
+    border-radius: 50px;
+    margin: 10px 40px 10px 0px;
+    padding: 10px 10px;
+    font-weight: bold;
+}
+.button1, .button2 {
+    background-color: black;
+    width: 250px;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #1d3c6a;
+    border-radius: 50px;
+    margin: 10px 40px 10px 0px;
+    padding: 10px 10px;
+    font-weight: bold;
+}
+h3 {
+    color: red;
+}
+
+input {
+    background-color: gray;
 }
