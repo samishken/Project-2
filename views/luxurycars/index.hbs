@@ -9,15 +9,20 @@
 <section class="inventory_list">
   {{#each cars}}
   <a href="/luxurycars/{{id}}" class="show details">
-        <div class="car detail">
-            <div class="car-detail">
-                <p><h4>{{make}}</h4> <h3>{{model}}</h3>  {{year}}</p>
-                <div id="access inventory">
-                    <form action="/luxurycars/edit" method="add">
-                    </form>
-                </div>
-            </div>
+     <div class="inventories">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="https://theelitecars.com/wp-content/uploads/2018/03/123-Recovered-Recovered-Recovered-Recovered-Recovered-Recovered-Recovered-Recovered-Recovered-Recovered-Recovered-Recovered-Recovered-Recovered-Recovered-3-200x150.jpg">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p><h4>{{make}}</h4> <h3>{{model}}</h3>  {{year}}</p>
         </div>
+       
+      </div>
+    </div>
+  </div>
+       
   </a><style>a {text-decoration: none; }</style>
   {{/each}}
  

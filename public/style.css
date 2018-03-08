@@ -49,3 +49,27 @@ h3 {
 input {
     background-color: gray;
 }
+
+.inventory_list {
+    float: center;
+}
+
+.card-content {
+    flex-wrap: inherit;
+}
+
+.card-image {
+    float: right;
+    flex-wrap: wrap;
+}
+
+.inventories {
+    width: 750px;
+    background-color: black;
+    color: black;
+    border: 1px solid #1d3c6a;
+    border-radius: 50px;
+    margin: 0 auto;
+    padding: 10px 10px;
+    font-weight: bold;
+}
