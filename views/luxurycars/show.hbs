@@ -1,9 +1,10 @@
+
 <section class="show">
     <div class="show details">
         <div class="model detail">
-            <h4>{{make}}</h4>
-        </div>
-        <div class="make-detail">
+           <h4>{{make}}</h4>
+       </div>
+      <div class="make-detail">
              <p>{{ model }}</p>
         </div>
         <div class="year-detail">
@@ -11,7 +12,6 @@
         </div>
     </div>
 </section>
-
 
 <br>
 <form action="/luxurycars/edit/{{this.id}}?_method=delete" method="edit">
@@ -22,6 +22,4 @@
   <input type="submit" value="Delete">
 </form> 
 
-<form action="/luxurycars" method="return home">
-  <input type="submit" value="HOME">
 </form>

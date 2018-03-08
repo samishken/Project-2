@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+    background-color: #ffffff4d;
+}
+
+.car-detail {
+        border-style: solid;
+        border-width: 50px;
+        border-color: #ffffff;    
+    }
+
+.edit-details {
+    padding: 60px;
+}
+
+.show-details {
+    padding: 60px;
+    
+}

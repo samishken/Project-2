@@ -5,36 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DC Elite Cars</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-  <link rel="stylesheet" href="style.css">
-  
+     <link href="/css/site.css" type="text/css" rel="stylesheet">
+    <!--Bootstarp-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css">  
 </head>
 <header>
- <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo right">DC Elite Cars</a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="/">Home</a></li>
-        <li><a href="/luxurycars">Inventory</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a class='dropdown-button btn' href='#' data-activates='dropdown1'>Media</a></li>
-            <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="#!">Twitter</a></li>
-                <li><a href="#!">Facebook</a></li>
-                <li class="divider"></li>
-                <li><a href="#!">three</a></li>
-                <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-                <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-            </ul>
-      </ul>
-    </div>
-  </nav>
+ <header class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+                <a class="navbar-brand" href="/">DC Elite Autos</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active"><a class="nav-link" href="/">HOME</a></li>
+                        {{#if currentUser.isAdmin}}
+                            <li class="nav-item"><a class="nav-link" href="#">ABOUT US</a></li>
+                        {{/if}}
+                        <a href="/luxurycars" class="waves-effect waves-light btn">STOCK</a><style>a {color: red;}</style>
+                        <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+                        
+                    
+                        {{#if currentUser}}
+                            {{#if currentUser.isAdmin}}
+                                <li class="nav-item"><a class="nav-link" href="/addCar">Add new car</a></li>
+                            {{/if}}
+                            <li class="nav-item"><a class="nav-link" href="/profil/{{currentUser.id}}">My cars</a></li>
+                        {{else}}
+                            <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+                        {{/if}}
+                    </ul>
+            {{#if currentUser}}
+                <span class="navbar-text"> 
+                    <span>|    Welcome, {{currentUser.username}}    |</span>
+                    <!-- правим logout чрез пост заявка, за да не влиза в back(history) -->
+                    <form id="logout-form" action="/logout" method="post"></form>
+                    <a id="logout" class="nav-link" href="javascript:document.getElementById('logout-form').submit()">Logout</a>
+                </span>
+            {{/if}}
+            </div>
+        </nav>
+
+        </header><style>.container {position: fixed;}</style>
 </header>
 <body>
-
+    
     {{{body}}}
 
+   
+        
 </body>
 </html>
-
 
